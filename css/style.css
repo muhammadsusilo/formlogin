@@ -43,7 +43,8 @@ form {
 
 .field-name input,
 .field-email input,
-.field-password {
+.field-password input,
+.field-finish input {
     padding: 10px 14px;
     width: 100%;
     height: 100%;

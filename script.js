@@ -14,6 +14,8 @@ function animasi() {
                 nextSlide(parent, email)
             } else if (input.type === "email" && validasiEmail(input)) {
                 nextSlide(parent, email)
+            } else if (input.type === "password" && validasiUser(input)) {
+                nextSlide(parent, email)
             }
 
         });
@@ -42,6 +44,16 @@ function validasiEmail(email) {
     } else {
         alert(`Masukkan email dengan benar`)
         error(`    rgb(189, 87, 87)    `);
+    }
+}
+
+function validasiPassword(password) {
+    if (user.value.length < 8) {
+        alert("masukkan password lebih dari 6 karakter ")
+        error(`rgb(189, 87, 87)`);
+    } else {
+        error(`rgb(176,176,176)`);
+        return true;
     }
 }
 
