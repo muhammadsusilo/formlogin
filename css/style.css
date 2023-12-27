@@ -14,6 +14,7 @@ form {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    transition: background 0.5s ease;
 }
 
 .field-name,
@@ -29,6 +30,7 @@ form {
     align-items: center;
     border: 1px solid rgb(12, 12, 12);
     border-radius: 10px;
+    transition: all 0.5s ease;
 }
 
 .field-name i,
@@ -39,21 +41,26 @@ form {
     cursor: pointer;
 }
 
-input {
+.field-name input,
+.field-email input,
+.field-password {
     padding: 10px 14px;
     width: 100%;
     height: 100%;
     background: transparent;
     outline: none;
     border: none;
+    flex: 1;
 }
 
 .innactive {
     opacity: 0;
     pointer-events: none;
+    transform: translateX(-50px -50px);
 }
 
 .active {
     opacity: 1;
     pointer-events: all;
+    transform: translate(-50px -50px);
 }
